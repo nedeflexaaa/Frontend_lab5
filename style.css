@@ -32,7 +32,7 @@ html {
 body {
     margin: 0;
     font-family: var(--font-body);
-    font-size: 16px;
+    font-size: 1rem;
     line-height: 1.6;
     color: var(--text);
     background-color: var(--paper);
@@ -96,7 +96,7 @@ code {
 
 .container,
 .page {
-    width: min(1080px, calc(100% - 40px));
+    width: min(67.5rem, calc(100% - 2.5rem));
     margin-inline: auto;
 }
 
@@ -114,10 +114,10 @@ code {
     align-items: center;
     justify-content: space-between;
     gap: 18px;
-    width: min(1080px, calc(100% - 40px));
-    min-height: 76px;
+    width: min(67.5rem, calc(100% - 2.5rem));
+    min-height: 4.75rem;
     margin-inline: auto;
-    padding: 10px 0;
+    padding: 0.625rem 0;
 }
 
 .brand {
@@ -133,8 +133,8 @@ code {
 }
 
 .brand-logo {
-    width: 48px;
-    height: 48px;
+    width: 3rem;
+    height: 3rem;
     border: 1px solid var(--line);
     object-fit: cover;
 }
@@ -182,7 +182,7 @@ code {
 }
 
 .page {
-    padding: 28px 0 48px;
+    padding: 1.75rem 0 3rem;
 }
 
 .page-view {

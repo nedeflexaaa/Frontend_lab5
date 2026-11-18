@@ -203,10 +203,10 @@ code {
 
 .hero {
     position: relative;
-    margin-bottom: 28px;
-    padding: 32px 36px;
+    margin-bottom: 1.75rem;
+    padding: 2rem 2.25rem;
     border: 1px solid var(--line);
-    border-left: 5px solid var(--orange);
+    border-left: 0.3125rem solid var(--orange);
     border-radius: 0;
     background-color: #ffffff;
     color: var(--text);
@@ -282,8 +282,8 @@ code {
 }
 
 .panel {
-    margin-bottom: 28px;
-    padding: 28px 32px;
+    margin-bottom: 1.75rem;
+    padding: 1.75rem 2rem;
     border: 1px solid var(--line);
     border-radius: 0;
     background-color: var(--surface);
@@ -327,7 +327,7 @@ code {
 
 .btn {
     display: inline-block;
-    padding: 11px 18px;
+    padding: 0.6875rem 1.125rem;
     border: 1px solid transparent;
     border-radius: 3px;
     font-family: var(--font-body);

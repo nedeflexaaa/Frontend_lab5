@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t d">
+  <title id="t">AgroSense</title>
+  <desc id="d">Поля, листок і датчик вологи як символи точного землеробства.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1a2e05"/>
+      <stop offset="0.5" stop-color="#3f6212"/>
+      <stop offset="1" stop-color="#a16207"/>
+    </linearGradient>
+    <linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#bef264"/>
+      <stop offset="1" stop-color="#65a30d"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <circle cx="970" cy="115" r="170" fill="#fde047" fill-opacity="0.12"/>
+  <circle cx="970" cy="115" r="105" fill="none" stroke="#fde047" stroke-opacity="0.4" stroke-width="2"/>
+  <g fill="none" stroke="#d9f99d" stroke-opacity="0.18" stroke-width="2">
+    <path d="M -40 480 C 180 410, 320 520, 520 450 S 820 380, 1040 470 S 1200 500, 1260 460"/>
+    <path d="M -40 520 C 180 450, 320 560, 520 490 S 820 420, 1040 510 S 1200 540, 1260 500"/>
+    <path d="M -40 560 C 180 490, 320 600, 520 530 S 820 460, 1040 550 S 1200 580, 1260 540"/>
+  </g>
+  <g transform="translate(820 220)">
+    <path d="M 170 0 C 275 30, 305 130, 250 230 C 145 210, 110 120, 170 0 Z" fill="url(#leaf)"/>
+    <path d="M 170 20 C 170 90, 180 155, 240 220" fill="none" stroke="#365314" stroke-width="5" stroke-linecap="round"/>
+    <path d="M 176 90 C 205 82, 232 84, 255 98" fill="none" stroke="#365314" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 184 135 C 208 127, 226 132, 242 145" fill="none" stroke="#365314" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 190 178 C 207 173, 218 176, 230 185" fill="none" stroke="#365314" stroke-width="4" stroke-linecap="round"/>
+    <rect x="92" y="210" width="18" height="105" rx="9" fill="#e5e7eb"/>
+    <rect x="76" y="170" width="50" height="58" rx="10" fill="#f8fafc"/>
+    <circle cx="101" cy="193" r="8" fill="#65a30d"/>
+    <path d="M 101 205 V 218" stroke="#65a30d" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 55 315 H 147" stroke="#fde047" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="80" y="100" fill="#fde047" font-size="18" font-weight="700" letter-spacing="4">PRECISION AGRICULTURE</text>
+    <text x="80" y="170" fill="#ffffff" font-size="58" font-weight="700">AgroSense</text>
+    <text x="80" y="205" fill="#ecfccb" font-size="22">Датчики вологи, прогнози та здоров’я полів</text>
+    <text x="80" y="500" fill="#bef264" font-size="17" font-weight="600" letter-spacing="2">ЗЕМЛЯ · ДАНІ · ВРОЖАЙ</text>
+  </g>
+</svg>

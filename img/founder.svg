@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="founderTitle founderDesc">
+  <title id="founderTitle">Олександр Василець, засновник Tech start-up</title>
+  <desc id="founderDesc">Стилізований портрет засновника у темно-синьому костюмі на тлі технологічного візерунка.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102a45"/>
+      <stop offset="0.55" stop-color="#163a5f"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="suit" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1f2937"/>
+      <stop offset="1" stop-color="#0f172a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.35" r="0.65">
+      <stop offset="0" stop-color="#5eead4" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#5eead4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse">
+      <path d="M 46 0 L 0 0 0 46" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)"/>
+  <rect width="800" height="1000" fill="url(#grid)"/>
+  <circle cx="400" cy="330" r="290" fill="url(#glow)"/>
+  <circle cx="92" cy="130" r="54" fill="none" stroke="#fdba74" stroke-opacity="0.55" stroke-width="2"/>
+  <circle cx="718" cy="210" r="82" fill="none" stroke="#5eead4" stroke-opacity="0.28" stroke-width="2"/>
+  <path d="M 0 820 C 180 740, 270 880, 430 800 S 700 730, 800 790 L 800 1000 L 0 1000 Z" fill="#0b1b2b" fill-opacity="0.55"/>
+  <g>
+    <path d="M 245 1000 L 285 660 C 300 585, 500 585, 515 660 L 555 1000 Z" fill="url(#suit)"/>
+    <path d="M 340 640 L 400 760 L 460 640 L 430 610 L 370 610 Z" fill="#f8fafc"/>
+    <path d="M 400 700 L 430 610 L 400 650 L 370 610 Z" fill="#c2410c"/>
+    <path d="M 330 660 C 350 620, 450 620, 470 660 L 500 760 C 450 700, 350 700, 300 760 Z" fill="#1e3a5f"/>
+    <rect x="372" y="560" width="56" height="75" rx="24" fill="#d9a06f"/>
+    <ellipse cx="400" cy="420" rx="132" ry="158" fill="#e8b98f"/>
+    <path d="M 268 400 C 270 280, 330 225, 400 225 C 470 225, 530 280, 532 400 C 500 345, 468 315, 400 315 C 332 315, 300 345, 268 400 Z" fill="#2f2a28"/>
+    <path d="M 268 400 C 250 430, 250 500, 278 535 L 300 480 Z" fill="#2f2a28"/>
+    <path d="M 532 400 C 550 430, 550 500, 522 535 L 500 480 Z" fill="#2f2a28"/>
+    <path d="M 330 390 C 350 375, 375 375, 392 390" fill="none" stroke="#2f2a28" stroke-width="7" stroke-linecap="round"/>
+    <path d="M 408 390 C 425 375, 450 375, 470 390" fill="none" stroke="#2f2a28" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="355" cy="425" r="8" fill="#2f2a28"/>
+    <circle cx="445" cy="425" r="8" fill="#2f2a28"/>
+    <path d="M 400 430 L 390 485 L 412 487" fill="none" stroke="#c58a5e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 355 525 C 380 548, 420 548, 445 525" fill="none" stroke="#8f4e3d" stroke-width="6" stroke-linecap="round"/>
+    <path d="M 315 445 C 330 470, 345 480, 360 480" fill="none" stroke="#d9a06f" stroke-width="8" stroke-linecap="round"/>
+    <path d="M 485 445 C 470 470, 455 480, 440 480" fill="none" stroke="#d9a06f" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="400" y="86" fill="#ffffff" font-size="25" font-weight="700" text-anchor="middle" letter-spacing="5">TECH START-UP</text>
+    <text x="400" y="900" fill="#ffffff" font-size="42" font-weight="700" text-anchor="middle">ОЛЕКСАНДР ВАСИЛЕЦЬ</text>
+    <text x="400" y="940" fill="#fdba74" font-size="19" font-weight="600" text-anchor="middle" letter-spacing="4">ЗАСНОВНИК · CEO</text>
+  </g>
+</svg>

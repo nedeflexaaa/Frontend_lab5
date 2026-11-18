@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t d">
+  <title id="t">MobilityOne</title>
+  <desc id="d">Мапа маршрутів, геометки та транспортний засіб на теплому градієнті.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#431407"/>
+      <stop offset="0.5" stop-color="#9a3412"/>
+      <stop offset="1" stop-color="#0f766e"/>
+    </linearGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#fdba74"/>
+      <stop offset="1" stop-color="#5eead4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.12">
+    <path d="M 0 120 H 1200 M 0 240 H 1200 M 0 360 H 1200 M 0 480 H 1200"/>
+    <path d="M 150 0 V 600 M 300 0 V 600 M 450 0 V 600 M 600 0 V 600 M 750 0 V 600 M 900 0 V 600 M 1050 0 V 600"/>
+  </g>
+  <path d="M 80 470 C 210 470, 250 330, 390 350 S 610 500, 730 360 S 900 170, 1120 230" fill="none" stroke="url(#route)" stroke-width="12" stroke-linecap="round" stroke-dasharray="2 26"/>
+  <path d="M 80 470 C 210 470, 250 330, 390 350 S 610 500, 730 360 S 900 170, 1120 230" fill="none" stroke="#ffffff" stroke-opacity="0.28" stroke-width="2"/>
+  <g>
+    <circle cx="390" cy="350" r="15" fill="#fdba74"/>
+    <circle cx="390" cy="350" r="5" fill="#431407"/>
+    <circle cx="730" cy="360" r="15" fill="#5eead4"/>
+    <circle cx="730" cy="360" r="5" fill="#0f766e"/>
+    <circle cx="1120" cy="230" r="15" fill="#fdba74"/>
+    <circle cx="1120" cy="230" r="5" fill="#431407"/>
+  </g>
+  <g transform="translate(775 330)">
+    <rect x="0" y="0" width="230" height="105" rx="28" fill="#0b1b2b"/>
+    <path d="M 22 0 L 62 -48 H 170 L 208 0 Z" fill="#0b1b2b"/>
+    <path d="M 40 0 L 70 -35 H 162 L 190 0 Z" fill="#5eead4" fill-opacity="0.7"/>
+    <path d="M 50 105 V 128 H 78 V 105 M 152 105 V 128 H 180 V 105" fill="none" stroke="#fdba74" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="58" cy="128" r="22" fill="#0b1b2b" stroke="#fdba74" stroke-width="8"/>
+    <circle cx="172" cy="128" r="22" fill="#0b1b2b" stroke="#fdba74" stroke-width="8"/>
+    <rect x="92" y="18" width="46" height="34" rx="7" fill="#f8fafc" fill-opacity="0.9"/>
+    <rect x="16" y="18" width="26" height="16" rx="6" fill="#fdba74"/>
+    <rect x="188" y="18" width="26" height="16" rx="6" fill="#5eead4"/>
+  </g>
+  <g fill="#5eead4">
+    <circle cx="980" cy="92" r="6"/>
+    <circle cx="1030" cy="120" r="4"/>
+    <circle cx="1080" cy="80" r="5"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="80" y="100" fill="#fdba74" font-size="18" font-weight="700" letter-spacing="4">URBAN MOBILITY</text>
+    <text x="80" y="170" fill="#ffffff" font-size="58" font-weight="700">MobilityOne</text>
+    <text x="80" y="205" fill="#ffedd5" font-size="22">Маршрути, транспорт і комфорт міста в реальному часі</text>
+    <text x="80" y="500" fill="#5eead4" font-size="17" font-weight="600" letter-spacing="2">РУХ · ЧАС · ДОСТУПНІСТЬ</text>
+  </g>
+</svg>

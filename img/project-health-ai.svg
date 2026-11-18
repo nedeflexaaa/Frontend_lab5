@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t d">
+  <title id="t">HealthLink AI</title>
+  <desc id="d">Медична кардіограма та цифрові дані на синьо-рожевому фоні.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="0.5" stop-color="#312e81"/>
+      <stop offset="1" stop-color="#9d174d"/>
+    </linearGradient>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f9a8d4"/>
+      <stop offset="0.5" stop-color="#fda4af"/>
+      <stop offset="1" stop-color="#fdba74"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <g fill="none" stroke="#ffffff" stroke-opacity="0.1">
+    <path d="M 0 120 H 1200 M 0 240 H 1200 M 0 360 H 1200 M 0 480 H 1200"/>
+    <path d="M 150 0 V 600 M 300 0 V 600 M 450 0 V 600 M 600 0 V 600 M 750 0 V 600 M 900 0 V 600 M 1050 0 V 600"/>
+  </g>
+  <circle cx="925" cy="300" r="185" fill="#f9a8d4" fill-opacity="0.08"/>
+  <circle cx="925" cy="300" r="130" fill="none" stroke="#f9a8d4" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M 640 320 H 720 L 755 245 L 805 405 L 850 285 L 885 320 H 1120" fill="none" stroke="url(#pulse)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#f9a8d4">
+    <circle cx="755" cy="245" r="10"/>
+    <circle cx="805" cy="405" r="10"/>
+    <circle cx="850" cy="285" r="10"/>
+  </g>
+  <g fill="#ffffff" fill-opacity="0.9">
+    <rect x="760" y="205" width="12" height="42" rx="4"/>
+    <rect x="745" y="220" width="42" height="12" rx="4"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="80" y="100" fill="#f9a8d4" font-size="18" font-weight="700" letter-spacing="4">DIGITAL HEALTH</text>
+    <text x="80" y="170" fill="#ffffff" font-size="58" font-weight="700">HealthLink AI</text>
+    <text x="80" y="205" fill="#e9d5ff" font-size="22">Аналітика звернень і підтримка клінічних рішень</text>
+    <text x="80" y="500" fill="#fbcfe8" font-size="17" font-weight="600" letter-spacing="2">ДАНІ · БЕЗПЕКА · ТУРБОТА</text>
+  </g>
+</svg>

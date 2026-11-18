@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Лабораторна робота №4: клієнтські скрипти JavaScript, DOM, події та динамічні елементи. Варіант 2.">
+    <title>Tech start-up — Лабораторна 4: DOM та події</title>
+    <link rel="icon" href="techcomp.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-current-page="home">
+    <header class="site-header" id="top">
+        <div class="header-inner">
+            <a class="brand" href="#home" data-page-link="home" aria-label="Tech start-up — на головну сторінку">
+                <img class="brand-logo" src="techcomp.png" alt="Логотип Tech start-up" width="48" height="48">
+                <span class="brand-text">Tech start-up <small>Лабораторна 4 · DOM та події</small></span>
+            </a>
+            <nav class="site-nav" aria-label="Основна навігація">
+                <a href="#home" data-page-link="home" aria-current="page">Головна</a>
+                <a href="#projects" data-page-link="projects">Проєкти</a>
+                <a href="#feedback" data-page-link="feedback">Зворотній зв’язок</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="page">
+        <section class="page-view" id="home" data-page="home" aria-labelledby="home-title">
+            <div class="hero">
+                <p class="eyebrow">Лабораторна робота №4 · Варіант 2</p>
+                <h1 id="home-title">Tech start-up</h1>
+                <p class="motto-line">
+                    <span class="motto-text" id="mottoText"></span><span class="typing-cursor" aria-hidden="true"></span>
+                </p>
+                <p class="hero-text">
+                    Створюємо зрозумілі цифрові сервіси для міст, бізнесу та освіти.
+                    На цій сторінці JavaScript оживляє інтерфейс: друкує девіз, реагує на
+                    наведення курсора, відкриває загадку засновника та змінює оформлення
+                    залежно від часу доби.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" id="nightPreview" type="button">Перевірити нічний режим</button>
+                    <span class="night-status" id="nightStatus">Зараз: денний режим</span>
+                </div>
+            </div>
+
+            <div class="home-grid">
+                <article class="panel">
+                    <p class="section-kicker">Про компанію</p>
+                    <h2>Технології, які поруч</h2>
+                    <p class="section-lead">
+                        Tech start-up розробляє продукти для розумної інфраструктури,
+                        охорони здоров’я, фінансів та навчання. Ми поєднуємо простий
+                        інтерфейс із надійною логікою та уважно ставимося до даних
+                        користувачів.
+                    </p>
+                    <ul class="feature-list">
+                        <li>Досліджуємо потреби людей перед початком розробки.</li>
+                        <li>Прототипуємо швидко та перевіряємо гіпотези на практиці.</li>
+                        <li>Залишаємо код зрозумілим для наступних команд.</li>
+                    </ul>
+                    <p class="muted-note">
+                        Головна сторінка автоматично переходить у нічний вигляд
+                        з 21:00 до 06:00: фони всіх елементів стають на 40% темнішими.
+                    </p>
+                </article>
+
+                <article class="panel founder-card">
+                    <p class="section-kicker">Засновник</p>
+                    <h2>Олександр Василець</h2>
+                    <figure class="founder-figure">
+                        <img id="founderImage" src="img/founder.svg" alt="Портрет засновника Tech start-up Олександра Васильця" width="800" height="1000" tabindex="0">
+                        <figcaption>Наведіть курсор на портрет — засновник загадає загадку.</figcaption>
+                    </figure>
+                    <p class="muted-note">
+                        «Технології мають бути зрозумілими. Якщо людина не думає про
+                        інтерфейс, значить, він зроблений добре».
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="page-view" id="projects" data-page="projects" aria-labelledby="projects-title" hidden>
+            <div class="page-intro projects-intro">
+                <a class="intro-brand" href="#home" data-page-link="home" aria-label="Tech start-up — на головну">
+                    <img src="techcomp.png" alt="Логотип Tech start-up" width="64" height="64">
+                    <span>Tech start-up</span>
+                </a>
+                <p class="eyebrow">Портфель компанії</p>
+                <h2 id="projects-title">Проєкти</h2>
+                <p>
+                    Шість напрямів, у яких команда вже має робочі прототипи або
+                    пілотні впровадження. Карусель показує по одному проєкту за раз;
+                    висота кожного слайда не перевищує 20% ширини вікна перегляду.
+                </p>
+            </div>
+
+            <div class="carousel" id="projectCarousel" aria-roledescription="carousel" aria-label="Карусель проєктів">
+                <div class="carousel-viewport">
+                    <div class="carousel-track" id="carouselTrack">
+                        <article class="carousel-slide">
+                            <img src="img/project-smart-city.svg" alt="Проєкт Smart City Hub: міська інфраструктура та датчики" width="1200" height="600">
+                            <div class="slide-caption">
+                                <span class="slide-number">01</span>
+                                <div>
+                                    <h3>Smart City Hub</h3>
+                                    <p>Україна · розумна інфраструктура та міські датчики</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <img src="img/project-health-ai.svg" alt="Проєкт HealthLink AI: медичні дані та штучний інтелект" width="1200" height="600">
+                            <div class="slide-caption">
+                                <span class="slide-number">02</span>
+                                <div>
+                                    <h3>HealthLink AI</h3>
+                                    <p>Німеччина · аналітика медичних звернень</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <img src="img/project-finguard.svg" alt="Проєкт FinGuard: захист фінансових операцій" width="1200" height="600">
+                            <div class="slide-caption">
+                                <span class="slide-number">03</span>
+                                <div>
+                                    <h3>FinGuard</h3>
+                                    <p>Велика Британія · безпека фінансових сервісів</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <img src="img/project-eduwave.svg" alt="Проєкт EduWave: навчальна платформа" width="1200" height="600">
+                            <div class="slide-caption">
+                                <span class="slide-number">04</span>
+                                <div>
+                                    <h3>EduWave</h3>
+                                    <p>США · адаптивна платформа для навчання</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <img src="img/project-agrosense.svg" alt="Проєкт AgroSense: датчики для агросектору" width="1200" height="600">
+                            <div class="slide-caption">
+                                <span class="slide-number">05</span>
+                                <div>
+                                    <h3>AgroSense</h3>
+                                    <p>Канада · точне землеробство та прогнозування</p>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <img src="img/project-mobility.svg" alt="Проєкт MobilityOne: мобільність і транспорт" width="1200" height="600">
+                            <div class="slide-caption">
+                                <span class="slide-number">06</span>
+                                <div>
+                                    <h3>MobilityOne</h3>
+                                    <p>Японія · маршрути та міська мобільність</p>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-button" id="prevSlide" type="button" aria-label="Попередній проєкт">←</button>
+                    <div class="carousel-dots" id="carouselDots" aria-label="Вибір слайда"></div>
+                    <span class="carousel-counter" id="carouselCounter" aria-live="polite">1 / 6</span>
+                    <button class="carousel-button" id="nextSlide" type="button" aria-label="Наступний проєкт">→</button>
+                </div>
+            </div>
+            <p class="carousel-note">Карусель перемикається автоматично кожні 5 секунд; кнопки та точки працюють вручну.</p>
+        </section>
+
+        <section class="page-view" id="feedback" data-page="feedback" aria-labelledby="feedback-title" hidden>
+            <div class="page-intro">
+                <p class="eyebrow">Ми поруч</p>
+                <h2 id="feedback-title">Зворотній зв’язок</h2>
+                <p>
+                    Опишіть ідею, партнерство або знайдену помилку. Наведіть курсор
+                    на поле «Детально» — воно змінить фон, отримає рамку й тінь,
+                    а праворуч з’явиться підказка.
+                </p>
+            </div>
+
+            <div class="feedback-layout">
+                <form class="feedback-form" id="feedbackForm" action="#" method="post">
+                    <div class="form-grid">
+                        <label>Прізвище та ім’я
+                            <input id="fullName" name="fullName" type="text" autocomplete="name" placeholder="Шевченко Тарас" required>
+                        </label>
+                        <label>E-mail
+                            <input id="email" name="email" type="email" autocomplete="email" placeholder="name@student.knu.ua" required>
+                        </label>
+                    </div>
+
+                    <fieldset class="choice-fieldset">
+                        <legend>Тема звернення</legend>
+                        <div class="choice-row">
+                            <label class="choice"><input type="radio" name="requestType" value="співпраця" required> Співпраця</label>
+                            <label class="choice"><input type="radio" name="requestType" value="підтримка"> Підтримка</label>
+                            <label class="choice"><input type="radio" name="requestType" value="ідея"> Ідея</label>
+                        </div>
+                    </fieldset>
+                <div class="detail-field" id="detailField">
+                        <label for="details">Детально</label>
+                        <textarea id="details" name="details" rows="7" maxlength="500" placeholder="Опишіть ваше питання (до 500 символів)..." aria-describedby="detailTooltip" required></textarea>
+                        <div class="detail-tooltip" id="detailTooltip" role="tooltip">
+                            Вдячні за Ваш час! Конкретизуйте мету звернення, будь ласка.
+                        </div>
+                    </div>
+
+                    <label class="consent" for="consent">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <span>Я даю згоду на обробку персональних даних.</span>
+                    </label>
+
+                    <div class="button-row form-actions">
+                        <button class="btn btn-primary" type="submit">Відправити</button>
+                        <button class="btn btn-ghost" type="reset">Очистити</button>
+                    </div>
+                    <p class="form-message" id="feedbackMessage" role="status" aria-live="polite"></p>
+                </form>
+
+                <aside class="panel contact-card" aria-label="Контакти підтримки">
+                    <p class="section-kicker">Контакти</p>
+                    <h3>Швидкий канал</h3>
+                    <p>hello@futuretech.ua</p>
+                    <p>+380 (44) 123-45-67</p>
+                    <p class="muted-note">Для термінових звернень додайте «URGENT» на початку повідомлення.</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <p>Tech start-up · лабораторна робота №4 · варіант 2</p>
+            <p>Василець Олександр Миколайович · ІПЗ-33(8) · підгрупа 8</p>
+        </div>
+    </footer>
+
+    <div class="modal-overlay" id="riddleModal" role="dialog" aria-modal="true" aria-labelledby="riddleTitle" hidden>
+        <div class="modal-card">
+            <button class="modal-close" type="button" onclick="closeRiddle()" aria-label="Закрити загадку">×</button>
+            <p class="section-kicker">Загадка від засновника</p>
+            <h2 id="riddleTitle">Хто оживляє сторінку?</h2>
+            <p class="riddle-text">
+                Я не маю крил, але реагую на кожен клік. Я живу в браузері,
+                оживляю кнопки, форми та каруселі. Хто я?
+            </p>
+            <form id="riddleForm">
+                <label for="riddleAnswer">Ваша відповідь</label>
+                <input id="riddleAnswer" name="riddleAnswer" type="text" autocomplete="off" placeholder="Напишіть відповідь" required>
+                <div class="button-row">
+                    <button class="btn btn-primary" type="submit">Перевірити</button>
+                    <button class="btn btn-ghost" type="button" onclick="closeRiddle()">Закрити</button>
+                </div>
+                <p class="riddle-feedback" id="riddleFeedback" role="status" aria-live="polite"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

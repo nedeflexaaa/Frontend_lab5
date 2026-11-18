@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" role="img" aria-labelledby="t d">
+  <title id="t">EduWave</title>
+  <desc id="d">Відкрита книга, академічна шапочка та хвилі знань на фіолетовому фоні.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e1b4b"/>
+      <stop offset="0.55" stop-color="#4338ca"/>
+      <stop offset="1" stop-color="#7e22ce"/>
+    </linearGradient>
+    <linearGradient id="wave" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#c4b5fd"/>
+      <stop offset="1" stop-color="#f0abfc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="url(#bg)"/>
+  <circle cx="955" cy="120" r="180" fill="#c4b5fd" fill-opacity="0.08"/>
+  <circle cx="955" cy="120" r="115" fill="none" stroke="#c4b5fd" stroke-opacity="0.35" stroke-width="2"/>
+  <path d="M 0 460 C 160 390, 260 520, 420 450 S 680 370, 840 450 S 1060 520, 1200 430 V 600 H 0 Z" fill="#312e81" fill-opacity="0.65"/>
+  <path d="M 0 500 C 180 430, 320 560, 500 480 S 760 410, 940 490 S 1090 540, 1200 480 V 600 H 0 Z" fill="#1e1b4b" fill-opacity="0.8"/>
+  <g transform="translate(790 230)">
+    <path d="M 0 70 L 170 10 L 340 70 L 170 130 Z" fill="#f0abfc"/>
+    <path d="M 0 70 L 170 130 L 340 70 L 340 95 L 170 155 L 0 95 Z" fill="#c084fc"/>
+    <path d="M 80 115 V 190 C 80 190, 120 225, 170 225 C 220 225, 260 190, 260 190 V 115 L 170 150 Z" fill="#faf5ff"/>
+    <path d="M 330 88 V 185" fill="none" stroke="#fde68a" stroke-width="7" stroke-linecap="round"/>
+    <circle cx="330" cy="195" r="12" fill="#fde68a"/>
+  </g>
+  <g fill="#e9d5ff" fill-opacity="0.85">
+    <circle cx="120" cy="120" r="5"/>
+    <circle cx="180" cy="155" r="3"/>
+    <circle cx="240" cy="105" r="4"/>
+    <circle cx="300" cy="145" r="3"/>
+    <circle cx="360" cy="95" r="5"/>
+    <circle cx="420" cy="135" r="3"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="80" y="100" fill="#e9d5ff" font-size="18" font-weight="700" letter-spacing="4">LEARNING PLATFORM</text>
+    <text x="80" y="170" fill="#ffffff" font-size="58" font-weight="700">EduWave</text>
+    <text x="80" y="205" fill="#ede9fe" font-size="22">Адаптивні курси, практика та зворотний зв’язок</text>
+    <text x="80" y="500" fill="#f0abfc" font-size="17" font-weight="600" letter-spacing="2">ЗНАННЯ · РИТМ · РЕЗУЛЬТАТ</text>
+  </g>
+</svg>

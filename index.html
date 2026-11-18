@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Лабораторна робота №4: клієнтські скрипти JavaScript, DOM, події та динамічні елементи. Варіант 2.">
-    <title>Tech start-up — Лабораторна 4: DOM та події</title>
+    <meta name="description" content="Лабораторна робота №5: адаптивність, кросбраузерність і метрики ефективності фронтенду. Варіант 2.">
+    <meta name="theme-color" content="#163a5f">
+    <title>Tech start-up — Лабораторна 5: адаптивність і кросбраузерність</title>
     <link rel="icon" href="techcomp.png" type="image/png">
+    <link rel="preload" as="image" href="techcomp-logo.webp" type="image/webp" fetchpriority="high">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-current-page="home">
     <header class="site-header" id="top">
         <div class="header-inner">
             <a class="brand" href="#home" data-page-link="home" aria-label="Tech start-up — на головну сторінку">
-                <img class="brand-logo" src="techcomp.png" alt="Логотип Tech start-up" width="48" height="48">
-                <span class="brand-text">Tech start-up <small>Лабораторна 4 · DOM та події</small></span>
+                <picture>
+                    <source srcset="techcomp-logo.webp" type="image/webp">
+                    <img class="brand-logo" src="techcomp-logo.png" alt="Логотип Tech start-up" width="48" height="48" loading="eager" decoding="async" fetchpriority="high">
+                </picture>
+                <span class="brand-text">Tech start-up <small>Лабораторна 5 · адаптивність</small></span>
             </a>
             <nav class="site-nav" aria-label="Основна навігація">
                 <a href="#home" data-page-link="home" aria-current="page">Головна</a>
@@ -26,16 +32,16 @@
     <main class="page">
         <section class="page-view" id="home" data-page="home" aria-labelledby="home-title">
             <div class="hero">
-                <p class="eyebrow">Лабораторна робота №4 · Варіант 2</p>
+                <p class="eyebrow">Лабораторна робота №5 · Варіант 2</p>
                 <h1 id="home-title">Tech start-up</h1>
                 <p class="motto-line">
                     <span class="motto-text" id="mottoText"></span><span class="typing-cursor" aria-hidden="true"></span>
                 </p>
                 <p class="hero-text">
                     Створюємо зрозумілі цифрові сервіси для міст, бізнесу та освіти.
-                    На цій сторінці JavaScript оживляє інтерфейс: друкує девіз, реагує на
-                    наведення курсора, відкриває загадку засновника та змінює оформлення
-                    залежно від часу доби.
+                    На цій сторінці JavaScript оживляє інтерфейс, а адаптивна верстка
+                    зберігає зручність навігації, каруселі та форми на екранах від 360 px.
+                    Оформлення також змінюється залежно від часу доби.
                 </p>
                 <div class="hero-actions">
                     <button class="btn btn-primary" id="nightPreview" type="button">Перевірити нічний режим</button>
@@ -68,7 +74,7 @@
                     <p class="section-kicker">Засновник</p>
                     <h2>Олександр Василець</h2>
                     <figure class="founder-figure">
-                        <img id="founderImage" src="img/founder.svg" alt="Портрет засновника Tech start-up Олександра Васильця" width="800" height="1000" tabindex="0">
+                        <img id="founderImage" src="img/founder.svg" alt="Портрет засновника Tech start-up Олександра Васильця" width="800" height="1000" tabindex="0" loading="eager" decoding="async">
                         <figcaption>Наведіть курсор на портрет — засновник загадає загадку.</figcaption>
                     </figure>
                     <p class="muted-note">
@@ -82,7 +88,10 @@
         <section class="page-view" id="projects" data-page="projects" aria-labelledby="projects-title" hidden>
             <div class="page-intro projects-intro">
                 <a class="intro-brand" href="#home" data-page-link="home" aria-label="Tech start-up — на головну">
-                    <img src="techcomp.png" alt="Логотип Tech start-up" width="64" height="64">
+                    <picture>
+                        <source srcset="techcomp-logo.webp" type="image/webp">
+                        <img src="techcomp-logo.png" alt="Логотип Tech start-up" width="64" height="64" loading="lazy" decoding="async">
+                    </picture>
                     <span>Tech start-up</span>
                 </a>
                 <p class="eyebrow">Портфель компанії</p>
@@ -98,7 +107,7 @@
                 <div class="carousel-viewport">
                     <div class="carousel-track" id="carouselTrack">
                         <article class="carousel-slide">
-                            <img src="img/project-smart-city.svg" alt="Проєкт Smart City Hub: міська інфраструктура та датчики" width="1200" height="600">
+                            <img src="img/project-smart-city.svg" alt="Проєкт Smart City Hub: міська інфраструктура та датчики" width="1200" height="600" loading="lazy" decoding="async">
                             <div class="slide-caption">
                                 <span class="slide-number">01</span>
                                 <div>
@@ -108,7 +117,7 @@
                             </div>
                         </article>
                         <article class="carousel-slide">
-                            <img src="img/project-health-ai.svg" alt="Проєкт HealthLink AI: медичні дані та штучний інтелект" width="1200" height="600">
+                            <img src="img/project-health-ai.svg" alt="Проєкт HealthLink AI: медичні дані та штучний інтелект" width="1200" height="600" loading="lazy" decoding="async">
                             <div class="slide-caption">
                                 <span class="slide-number">02</span>
                                 <div>
@@ -118,7 +127,7 @@
                             </div>
                         </article>
                         <article class="carousel-slide">
-                            <img src="img/project-finguard.svg" alt="Проєкт FinGuard: захист фінансових операцій" width="1200" height="600">
+                            <img src="img/project-finguard.svg" alt="Проєкт FinGuard: захист фінансових операцій" width="1200" height="600" loading="lazy" decoding="async">
                             <div class="slide-caption">
                                 <span class="slide-number">03</span>
                                 <div>
@@ -128,7 +137,7 @@
                             </div>
                         </article>
                         <article class="carousel-slide">
-                            <img src="img/project-eduwave.svg" alt="Проєкт EduWave: навчальна платформа" width="1200" height="600">
+                            <img src="img/project-eduwave.svg" alt="Проєкт EduWave: навчальна платформа" width="1200" height="600" loading="lazy" decoding="async">
                             <div class="slide-caption">
                                 <span class="slide-number">04</span>
                                 <div>
@@ -138,7 +147,7 @@
                             </div>
                         </article>
                         <article class="carousel-slide">
-                            <img src="img/project-agrosense.svg" alt="Проєкт AgroSense: датчики для агросектору" width="1200" height="600">
+                            <img src="img/project-agrosense.svg" alt="Проєкт AgroSense: датчики для агросектору" width="1200" height="600" loading="lazy" decoding="async">
                             <div class="slide-caption">
                                 <span class="slide-number">05</span>
                                 <div>
@@ -148,7 +157,7 @@
                             </div>
                         </article>
                         <article class="carousel-slide">
-                            <img src="img/project-mobility.svg" alt="Проєкт MobilityOne: мобільність і транспорт" width="1200" height="600">
+                            <img src="img/project-mobility.svg" alt="Проєкт MobilityOne: мобільність і транспорт" width="1200" height="600" loading="lazy" decoding="async">
                             <div class="slide-caption">
                                 <span class="slide-number">06</span>
                                 <div>
@@ -199,7 +208,8 @@
                             <label class="choice"><input type="radio" name="requestType" value="ідея"> Ідея</label>
                         </div>
                     </fieldset>
-                <div class="detail-field" id="detailField">
+
+                    <div class="detail-field" id="detailField">
                         <label for="details">Детально</label>
                         <textarea id="details" name="details" rows="7" maxlength="500" placeholder="Опишіть ваше питання (до 500 символів)..." aria-describedby="detailTooltip" required></textarea>
                         <div class="detail-tooltip" id="detailTooltip" role="tooltip">
@@ -232,7 +242,7 @@
 
     <footer class="site-footer">
         <div class="footer-inner">
-            <p>Tech start-up · лабораторна робота №4 · варіант 2</p>
+            <p>Tech start-up · лабораторна робота №5 · варіант 2</p>
             <p>Василець Олександр Миколайович · ІПЗ-33(8) · підгрупа 8</p>
         </div>
     </footer>
@@ -258,6 +268,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

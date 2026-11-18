@@ -458,6 +458,12 @@ code {
     border: 1px solid var(--line);
 }
 
+.brand picture,
+.intro-brand picture {
+    display: block;
+    flex: 0 0 auto;
+}
+
 .carousel {
     width: min(61.25rem, 100%);
     margin: 0 auto;
@@ -593,7 +599,7 @@ code {
 }
 
 .feedback-form {
-    padding: 24px 26px;
+    padding: 1.5rem 1.625rem;
     border: 1px solid var(--line);
     background-color: var(--surface);
 }
@@ -675,7 +681,7 @@ textarea:focus {
 
 .detail-field {
     position: relative;
-    max-width: 560px;
+    max-width: 35rem;
     margin-top: 4px;
 }
 

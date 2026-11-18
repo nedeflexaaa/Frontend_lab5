@@ -1054,3 +1054,260 @@ body.night-mode .choice {
         animation-iteration-count: 1 !important;
     }
 }
+
+/* Кросбраузерні префікси для властивостей, які історично відрізнялися. */
+.site-nav a,
+.btn,
+.carousel-button,
+.detail-field textarea,
+.detail-tooltip {
+    -webkit-transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, -webkit-transform 0.2s ease;
+    -moz-transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, -moz-transform 0.2s ease;
+    -o-transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, -o-transform 0.2s ease;
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-track {
+    -webkit-transition: -webkit-transform 0.45s ease;
+    -moz-transition: -moz-transform 0.45s ease;
+    -o-transition: -o-transform 0.45s ease;
+    transition: transform 0.45s ease;
+    will-change: transform;
+}
+
+.carousel-viewport {
+    -webkit-box-shadow: 0 10px 26px rgba(22, 58, 95, 0.12);
+    -moz-box-shadow: 0 10px 26px rgba(22, 58, 95, 0.12);
+    -ms-box-shadow: 0 10px 26px rgba(22, 58, 95, 0.12);
+    box-shadow: 0 10px 26px rgba(22, 58, 95, 0.12);
+}
+
+.founder-figure img:hover,
+.founder-figure img:focus-visible {
+    -webkit-box-shadow: 0 12px 28px rgba(22, 58, 95, 0.18);
+    -moz-box-shadow: 0 12px 28px rgba(22, 58, 95, 0.18);
+    -ms-box-shadow: 0 12px 28px rgba(22, 58, 95, 0.18);
+    box-shadow: 0 12px 28px rgba(22, 58, 95, 0.18);
+}
+
+.modal-card {
+    -webkit-box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    -ms-box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+
+.detail-tooltip {
+    -webkit-transform: translateX(-8px);
+    -moz-transform: translateX(-8px);
+    -ms-transform: translateX(-8px);
+    transform: translateX(-8px);
+}
+
+.detail-field.is-active .detail-tooltip {
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.detail-field textarea,
+.founder-figure img {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.detail-field textarea,
+.founder-figure img {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.founder-figure img {
+    aspect-ratio: 4 / 5;
+}
+
+.carousel-slide img {
+    aspect-ratio: 2 / 1;
+}
+
+.modal-overlay {
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+@media (max-width: 1200px) {
+    .page,
+    .header-inner,
+    .footer-inner {
+        width: min(67.5rem, calc(100% - 3rem));
+    }
+}
+
+@media (max-width: 1024px) {
+    .page,
+    .header-inner,
+    .footer-inner {
+        width: min(67.5rem, calc(100% - 2rem));
+    }
+
+    .hero {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .carousel {
+        width: min(56rem, 100%);
+    }
+}
+
+@media (max-width: 760px) {
+    .site-nav {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.25rem;
+    }
+
+    .site-nav a {
+        white-space: nowrap;
+    }
+
+    .brand-text small {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
+    .page,
+    .header-inner,
+    .footer-inner {
+        width: min(67.5rem, calc(100% - 1.5rem));
+    }
+
+    .hero,
+    .panel,
+    .feedback-form {
+        padding: 1.375rem 1.125rem;
+    }
+
+    .carousel-slide {
+        height: min(20vw, 13.75rem);
+    }
+
+    .carousel-controls {
+        gap: 0.5rem;
+    }
+
+    .carousel-button {
+        width: 2.125rem;
+        height: 2.125rem;
+    }
+
+    .carousel-counter {
+        min-width: 2.75rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .page,
+    .header-inner,
+    .footer-inner {
+        width: calc(100% - 1rem);
+    }
+
+    .brand-logo {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .brand-text {
+        font-size: 1.05rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero,
+    .panel,
+    .feedback-form {
+        padding: 1.125rem 0.875rem;
+    }
+
+    .modal-card {
+        padding: 1.5rem 1.125rem;
+    }
+
+    .button-row .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 240px) {
+    .brand-text {
+        display: none;
+    }
+
+    .site-nav {
+        gap: 0.25rem;
+    }
+
+    .site-nav a {
+        font-size: 0.75rem;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-counter {
+        display: none;
+    }
+}
+
+@media (max-width: 176px) {
+    .brand-logo {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .site-nav {
+        gap: 0.125rem;
+    }
+
+    .site-nav a {
+        font-size: 0.65rem;
+    }
+
+    .hero,
+    .panel,
+    .feedback-form {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .carousel-button {
+        width: 1.75rem;
+        height: 1.75rem;
+    }
+}
+
+@media (hover: none) {
+    .detail-tooltip {
+        position: static;
+        width: auto;
+        margin-top: 0.625rem;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        display: none;
+    }
+
+    .detail-field.is-active .detail-tooltip {
+        display: block;
+    }
+
+    .detail-tooltip::before {
+        display: none;
+    }
+}

@@ -1008,24 +1008,24 @@ body.night-mode .choice {
     .page,
     .header-inner,
     .footer-inner {
-        width: min(1080px, calc(100% - 24px));
+        width: min(67.5rem, calc(100% - 1.5rem));
     }
 
     .hero {
-        padding: 24px 20px;
+        padding: 1.5rem 1.25rem;
     }
 
     .panel,
     .feedback-form {
-        padding: 22px 18px;
+        padding: 1.375rem 1.125rem;
     }
 
     .carousel-slide {
-        height: min(20vw, 220px);
+        height: min(20vw, 13.75rem);
     }
 
     .slide-caption {
-        padding: 12px 14px;
+        padding: 0.75rem 0.875rem;
     }
 
     .slide-caption h3 {

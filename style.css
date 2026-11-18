@@ -459,7 +459,7 @@ code {
 }
 
 .carousel {
-    width: min(980px, 100%);
+    width: min(61.25rem, 100%);
     margin: 0 auto;
 }
 
@@ -478,7 +478,7 @@ code {
 .carousel-slide {
     position: relative;
     flex: 0 0 100%;
-    height: min(20vw, 260px);
+    height: min(20vw, 16.25rem);
     overflow: hidden;
     background-color: var(--navy-dark);
 }
@@ -531,8 +531,8 @@ code {
 }
 
 .carousel-button {
-    width: 38px;
-    height: 38px;
+    width: 2.375rem;
+    height: 2.375rem;
     border: 1px solid var(--navy);
     border-radius: 50%;
     background-color: #ffffff;
@@ -556,8 +556,8 @@ code {
 }
 
 .carousel-dot {
-    width: 10px;
-    height: 10px;
+    width: 0.625rem;
+    height: 0.625rem;
     padding: 0;
     border: 1px solid var(--navy);
     border-radius: 50%;
@@ -571,7 +571,7 @@ code {
 }
 
 .carousel-counter {
-    min-width: 52px;
+    min-width: 3.25rem;
     color: var(--muted);
     font-size: 0.84rem;
     font-weight: 700;
